@@ -7,7 +7,6 @@ int main(void)
 
 	char* str = get_next_line(fd);
 	int sum = 0;
-	char *digits[] = {"one","two","three","four","five","six","seven","eight","nine"};
 
 	while(str)
 	{
@@ -23,21 +22,6 @@ int main(void)
 					result = result * 10 + str[i] - 48;
 				lastdig = str[i] - 48;
 				nums++;
-			}
-
-			for(int j = 0; j < 9; j++)
-			{
-				int size = strlen(digits[j]);
-				if(strncmp(str + i, digits[j], size) == 0)
-				{
-					if(nums == 0)
-					{
-						result = result * 10 + j + 1;
-/* 						printf("reached, [%i]\n", j + 1); */
-					}
-					lastdig = j + 1;
-					nums++;
-				}
 			}
 		}
 		result = result * 10 + lastdig;
