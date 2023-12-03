@@ -68,7 +68,11 @@ char	*ft_strjoin_special(char *s1, char *s2)
 	while (s2 != NULL && s2[j] != '\0')
 		join[i++] = s2[j++];
 	join[len] = '\0';
+<<<<<<< HEAD
 	if (s1 != NULL)
+=======
+	if (s1 != NULL)	
+>>>>>>> 323b6723d62e6acaef4063062331b077cb5fe17e
 		free(s1);
 	return (join);
 }
